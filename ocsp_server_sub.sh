@@ -1,0 +1,1 @@
+openssl ocsp -port 9080 -index stores/sub-ca-server/db/index -rsigner stores/sub-ca-server/sub-ocsp.crt -rkey stores/sub-ca-server/private/root-ocsp.key -CA stores/sub-ca-server/sub-ca-server.crt -text

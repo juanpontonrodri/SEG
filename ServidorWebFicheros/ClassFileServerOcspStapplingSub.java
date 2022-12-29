@@ -325,11 +325,13 @@ public class ClassFileServerOcspStapplingSub extends ClassServer {
 		// Almacen de claves
 		
 		System.setProperty("javax.net.ssl.keyStore",         raizMios + "keystore_Server_sub.jce");
+		System.out.println(raizMios+"sub");	
 		System.setProperty("javax.net.ssl.keyStoreType",     "JCEKS");
 		System.setProperty("javax.net.ssl.keyStorePassword", "pepe");
 
 		// Almacen de confianza
 		System.setProperty("javax.net.ssl.trustStore",          raizMios + "truststore_Server_sub.jce");		
+		System.out.println(raizMios+"sub");	
 		System.setProperty("javax.net.ssl.trustStoreType",     "JCEKS");
 		System.setProperty("javax.net.ssl.trustStorePassword", "pepe");
 

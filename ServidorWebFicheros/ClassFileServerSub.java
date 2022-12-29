@@ -18,7 +18,7 @@ import javax.security.cert.X509Certificate;
  * server.
  ********************************************************************/
 
-public class ClassFileServer extends ClassServer {
+public class ClassFileServerSub extends ClassServer {
 
     private String     		docroot;
     private static int 		DefaultServerPort = 9001;
@@ -31,7 +31,7 @@ public class ClassFileServer extends ClassServer {
      *
      * @param path the path where the server locates files
      **********************************************************/
-    public ClassFileServer(ServerSocket ss, String docroot) throws IOException
+    public ClassFileServerSub(ServerSocket ss, String docroot) throws IOException
     {
 		super(ss);
 		this.docroot = docroot;
@@ -114,7 +114,7 @@ public class ClassFileServer extends ClassServer {
 	
 		try {
 		    ServerSocketFactory ssf =
-		    		ClassFileServer.getServerSocketFactory(type);
+		    		ClassFileServerSub.getServerSocketFactory(type);
 	
 		    ServerSocket ss = ssf.createServerSocket(port);
 	
@@ -124,7 +124,7 @@ public class ClassFileServer extends ClassServer {
 		    	((SSLServerSocket)ss).setNeedClientAuth(true);
 		    }
 		
-		    new ClassFileServer(ss, docroot);
+		    new ClassFileServerSub(ss, docroot);
 		
 		} catch (IOException e) {
 		    System.out.println("Unable to start ClassServer: " +
