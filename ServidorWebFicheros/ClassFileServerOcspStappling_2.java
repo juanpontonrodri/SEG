@@ -61,7 +61,7 @@ import javax.security.cert.X509Certificate;
  * server.
  */
 
-public class ClassFileServerOcspStappling extends ClassServer {
+public class ClassFileServerOcspStappling_2 extends ClassServer {
 
     private String docroot;
 
@@ -73,7 +73,7 @@ public class ClassFileServerOcspStappling extends ClassServer {
      *
      * @param path the path where the server locates files
      */
-    public ClassFileServerOcspStappling(ServerSocket ss, String docroot) throws IOException
+    public ClassFileServerOcspStappling_2(ServerSocket ss, String docroot) throws IOException
     {
 	super(ss);
 	this.docroot = docroot;

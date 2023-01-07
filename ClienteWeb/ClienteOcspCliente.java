@@ -68,7 +68,7 @@ import java.util.EnumSet;
  * The application can be modified to connect to a server outside
  * the firewall by following SSLSocketClientWithTunneling.java.
  */
-public class SSLSocketClientWithClientAuthOcsp {
+public class ClienteOcspCliente {
 
 
 	private static String 	raizMios  = System.getProperty("user.home" )+"/SEG/stores/";

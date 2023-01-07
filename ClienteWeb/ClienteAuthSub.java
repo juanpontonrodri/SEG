@@ -32,7 +32,7 @@ import javax.net.ssl.TrustManager;
  * following SSLSocketClientWithTunneling.java.
  * 
  ****************************************************************************/
-public class SSLSocketClientWithClientAuth {
+public class ClienteAuthSub {
 
 
 	private static String raizAlmacenes = System.getProperty("user.home" )+"/SEG/stores/";
@@ -179,20 +179,22 @@ public class SSLSocketClientWithClientAuth {
 	/******************************************************
 	 * definirKeyStores()
 	 *****************************************************/
-    private static String ficheroKeyStore   = raizAlmacenes + "keystore_Client.jce";
-    private static String ficheroTrustStore = raizAlmacenes + "truststore_Client.jce";
+    private static String ficheroKeyStore   = raizAlmacenes + "keystore_Client_sub.jce";
+    private static String ficheroTrustStore = raizAlmacenes + "truststore_Client_sub.jce";
 
 	private static void definirKeyStores() {
 
 		// Almacen de credenciales
 
 		System.setProperty("javax.net.ssl.keyStore", ficheroKeyStore);
+		System.out.println(ficheroKeyStore);
 		System.setProperty("javax.net.ssl.keyStoreType", "JCEKS");
 		System.setProperty("javax.net.ssl.keyStorePassword", "pepe");
 
 		// Almacen de confianza
 		
 		System.setProperty("javax.net.ssl.trustStore", ficheroTrustStore);
+		System.out.println(ficheroTrustStore);
 		System.setProperty("javax.net.ssl.trustStoreType", "JCEKS");
 		System.setProperty("javax.net.ssl.trustStorePassword", "pepe");
 

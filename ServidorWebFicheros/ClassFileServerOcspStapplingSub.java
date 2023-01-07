@@ -162,7 +162,7 @@ public class ClassFileServerOcspStapplingSub extends ClassServer {
 	
 	try {
 	    ServerSocketFactory ssf =
-	    		ClassFileServer.getServerSocketFactory(type);
+	    		ClassFileServerSub.getServerSocketFactory(type);
 	    
 	    ServerSocket ss = ssf.createServerSocket(port);
 	    
@@ -228,7 +228,7 @@ public class ClassFileServerOcspStapplingSub extends ClassServer {
 	    	
 	    }
 	    
-	    new ClassFileServer(ss, docroot);
+	    new ClassFileServerSub(ss, docroot);
 
 	} catch (IOException e) {
 	    System.out.println("Unable to start ClassServer: " +
